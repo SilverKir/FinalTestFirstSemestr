@@ -2,11 +2,19 @@ package data;
 
 import java.util.Date;
 
-public class Animals {
-    private int id;
-     public  String name;
-     public  Date birthDate;
-     public String commands;
+public abstract class Animals {
+    private static Integer id;
+    public static  Integer getId(){
+        return  id;
+    }
+
+    static {
+        id=0;
+    }
+
+    protected  String name;
+    protected  Date birthDate;
+    protected String commands;
 
     public Animals(int id, String name, Date birthDate, String commands) {
         this.id = id;
