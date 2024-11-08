@@ -13,14 +13,6 @@ public abstract class Animals {
     protected Date birthDate;
     protected List<String> commands = new ArrayList<String>();
 
-//    public Animals(String name, Date birthDate, String command) {
-//        id++;
-//        this.name = name;
-//        this.birthDate = birthDate;
-//        if (!command.isEmpty()){
-//        commands= new ArrayList<String>();
-//        commands.add(command.toLowerCase());}
-//    }
 
     public String getName() {
         return name;
@@ -68,7 +60,7 @@ public abstract class Animals {
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd.MM.yyyy");
 
     private void Print(StringBuilder sb, String indent) {
-        sb.append(String.format("%s Имя: %s, Дата: %s, Команды:%s", indent, name, simpleDateFormat.format(birthDate), getCommands()));
+        sb.append(String.format("%s Имя: %s, Дата рождения: %s, Команды: %s", indent, name, simpleDateFormat.format(birthDate), getCommands()));
 
         for (Animals animal : animalsList)
             animal.Print(sb, indent + "  ");
